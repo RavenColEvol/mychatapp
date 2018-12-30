@@ -1,4 +1,6 @@
-var socket = io.connect('http://localhost:4000')
+var port = require('../index.js')
+console.log(port)
+var socket = io.connect('http://localhost:'+port)
 
 
 var message = document.getElementById('message'),

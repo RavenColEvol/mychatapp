@@ -1,8 +1,8 @@
 var express = require('express')
 var app = express();
 var socket = require('socket.io')
-
-var server = app.listen(4000,function(){
+var port = process.env.port || 4000
+var server = app.listen(port,function(){
     console.log("Listening to the port 4000");
 })
 
@@ -19,3 +19,4 @@ io.on('connection',function(socket){
     });
 })
 
+module.exports = port
