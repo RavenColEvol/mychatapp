@@ -6,7 +6,7 @@ var server = app.listen(port,function(){
     console.log("Listening to the port 4000");
 })
 
-app.use(express.static('public'));
+app.use('/',express.static('public'));
 var io = socket(server)
 io.on('connection',function(socket){
     console.log(socket.id)
